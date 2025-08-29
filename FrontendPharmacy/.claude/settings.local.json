@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "WebFetch(domain:pharmacy.evitalrx.in)",
+      "Bash(npm run dev:*)",
+      "Bash(node:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "Bash(electron:*)",
+      "Bash(timeout 10 npm start)",
+      "Bash(npm run electron:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx eslint:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

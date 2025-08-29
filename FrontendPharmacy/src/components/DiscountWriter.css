@@ -1,0 +1,60 @@
+/* Discount Writer Styles */
+.discount-writer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.discount-input {
+  flex: 1;
+  width: 50px;
+  padding: 0.25rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.discount-input:focus {
+  outline: none;
+  border-color: #0000FF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.discount-type-select {
+  padding: 0.25rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  min-width: 40px;
+}
+
+.discount-type-select:focus {
+  outline: none;
+  border-color: #0000FF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.discount-type-select:hover {
+  border-color: #0000FF;
+}
+
+/* Make inputs responsive */
+@media (max-width: 768px) {
+  .discount-input {
+    width: 40px;
+    font-size: 0.7rem;
+    padding: 0.2rem;
+  }
+  
+  .discount-type-select {
+    font-size: 0.7rem;
+    padding: 0.2rem;
+    min-width: 35px;
+  }
+}

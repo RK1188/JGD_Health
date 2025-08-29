@@ -1,0 +1,389 @@
+.purchase-page {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 70px);
+}
+
+/* Header Section */
+.purchase-header {
+  margin-bottom: 1rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.breadcrumb-item {
+  color: #333;
+}
+
+.breadcrumb-item.active {
+  color: #0000FF;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+/* Warning Banner */
+.warning-banner {
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.warning-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.warning-icon {
+  font-size: 1.2rem;
+  color: #f57c00;
+}
+
+.warning-text {
+  color: #d32f2f;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Control Bar */
+.control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.control-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.control-dropdown {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.9rem;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.control-dropdown:focus {
+  outline: none;
+  border-color: #0000FF;
+}
+
+.control-right {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.control-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Section */
+.purchase-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.distributor-field {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.distributor-field .form-control {
+  flex: 1;
+}
+
+.emails-btn {
+  background: #0000FF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.emails-btn:hover {
+  background: #0000CC;
+}
+
+/* Items Table */
+.items-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.items-table th {
+  background: #f8f9fa;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+  color: #333;
+  white-space: nowrap;
+}
+
+.items-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.item-row {
+  background: white;
+}
+
+.item-row:hover {
+  background: #f8f9fa;
+}
+
+.add-item-row {
+  background: #f8f9fa;
+}
+
+.table-input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: white;
+}
+
+.table-input:focus {
+  outline: none;
+  border-color: #0000FF;
+}
+
+/* LIFA/LILA Toggles */
+.lifa-toggle,
+.lila-toggle {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.lifa-toggle input,
+.lila-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.lifa-toggle input:checked + .toggle-slider {
+  background-color: #4caf50;
+}
+
+.lila-toggle input:checked + .toggle-slider {
+  background-color: #2196f3;
+}
+
+.lifa-toggle input:checked + .toggle-slider:before,
+.lila-toggle input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Add Button */
+.add-btn {
+  background: #0000FF;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  background: #0000CC;
+}
+
+/* Dynamic Input Styles */
+.add-item-row td:empty {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.add-item-row {
+  background: #f0f8ff;
+}
+
+.add-item-row:hover {
+  background: #e6f3ff;
+}
+
+/* Product Details */
+.product-details {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.details-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.details-row span {
+  color: #333;
+}
+
+.details-row strong {
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .items-table {
+    font-size: 0.8rem;
+  }
+  
+  .items-table th,
+  .items-table td {
+    padding: 0.5rem 0.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .purchase-page {
+    padding: 0.5rem;
+  }
+  
+  .control-bar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .control-left,
+  .control-right {
+    justify-content: center;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .distributor-field {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .items-table-container {
+    overflow-x: scroll;
+  }
+  
+  .details-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 1rem;
+  }
+  
+  .warning-text {
+    font-size: 0.8rem;
+  }
+  
+  .control-dropdown {
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+  
+  .purchase-form {
+    padding: 1rem;
+  }
+}

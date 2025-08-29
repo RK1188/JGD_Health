@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales - Pharmacy Management System</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/sales.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="main-content">
+        <div class="sales-container">
+            <div class="page-header">
+                <div class="breadcrumb">Sales > New</div>
+                <div class="header-controls">
+                    <select class="control-select" id="owner-select">
+                        <option value="owner">Owner</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                    <select class="control-select payment-type" id="payment-type">
+                        <option value="cash">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                    <button class="control-btn reminder-btn" id="set-reminder">
+                        Set Reminder
+                    </button>
+                    <select class="control-select" id="pickup-type">
+                        <option value="pickup">Pickup</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                    <button class="save-btn" id="save-btn">
+                        Save ⬇️
+                    </button>
+                    <button class="settings-btn" id="settings-btn">
+                        Settings
+                    </button>
+                </div>
+            </div>
+
+            <div class="sales-content">
+                <div class="bill-info-section">
+                    <div class="bill-date">
+                        <div class="date-icon"></div>
+                        <div class="date-info">
+                            <span class="label">Bill Date</span>
+                            <span class="date" id="bill-date">28/08/2025</span>
+                        </div>
+                    </div>
+                    <div class="customer-info">
+                        <div class="customer-icon"></div>
+                        <div class="customer-details">
+                            <span class="label">Customer Mobile / Name</span>
+                            <input type="text" placeholder="Search by Mobile, Name" id="customer-search">
+                            <button class="create-counter-bill">Create as Counter Bill</button>
+                        </div>
+                    </div>
+                    <div class="billing-for">
+                        <span class="label">Billing for</span>
+                        <select id="billing-for">
+                            <option value="self">Self</option>
+                            <option value="family">Family</option>
+                            <option value="company">Company</option>
+                        </select>
+                    </div>
+                    <div class="doctor-info">
+                        <div class="doctor-icon">🩺</div>
+                        <div class="doctor-details">
+                            <span class="label">Doctor</span>
+                            <input type="text" placeholder="Enter Doctor Name" id="doctor-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="items-table-section">
+                    <div class="table-header">
+                        <div class="header-cell">Item Name <i class="info-icon">ℹ️</i></div>
+                        <div class="header-cell">LIFA/LILA</div>
+                        <div class="header-cell">Unit/Pack</div>
+                        <div class="header-cell">Loc.</div>
+                        <div class="header-cell">Batch</div>
+                        <div class="header-cell">Expiry</div>
+                        <div class="header-cell">MRP</div>
+                        <div class="header-cell">Qty. <i class="info-icon">ℹ️</i></div>
+                        <div class="header-cell">D% <i class="info-icon">ℹ️</i></div>
+                        <div class="header-cell">D.Price</div>
+                        <div class="header-cell">GST% <i class="info-icon">ℹ️</i></div>
+                        <div class="header-cell">Amount</div>
+                        <div class="header-cell">Action</div>
+                    </div>
+                    <div class="items-container" id="items-container">
+                        <!-- Dynamic items will be added here -->
+                    </div>
+                    <div class="add-item-row">
+                        <button class="add-item-btn" id="add-item-btn">
+                            Add Item
+                        </button>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="total-summary">
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Discount:</span>
+                            <span id="total-discount">₹0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>GST:</span>
+                            <span id="total-gst">₹0.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="grand-total">₹0.00</span>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn primary" id="save-bill">Save Bill</button>
+                        <button class="btn secondary" id="print-bill">Print</button>
+                        <button class="btn secondary" id="email-bill">Email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="sale-success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sale Completed Successfully!</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon"></div>
+                <p>Invoice #<span id="invoice-number"></span> has been generated.</p>
+                <div class="modal-actions">
+                    <button class="btn secondary" id="print-invoice">Print Invoice</button>
+                    <button class="btn primary" id="new-sale-modal">New Sale</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../components/header.js"></script>
+    <script src="../assets/js/sales.js"></script>
+</body>
+</html>
